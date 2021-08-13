@@ -53,9 +53,7 @@ function loadConfig() {
         DISCORD_TOK = process.env.DISCORD_TOK;
         WITAPIKEY_TOK = process.env.WITAPIKEY_TOK;
 
-    }
-    if (!DISCORD_TOK || !WITAPIKEY_TOK)
-        throw 'failed loading config #113 missing keys!'
+  console.log(DISCORD_TOK + WITAPIKEY_TOK);
     
 }
 loadConfig()
