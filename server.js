@@ -450,7 +450,7 @@ function process_commands_query(query, mapKey, userid) {
 const _CMD_HELP        = PREFIX + 'help' ;
 const _CMD_JOIN        = PREFIX + 'join';
 const _CMD_LEAVE       = PREFIX + 'leave';
-const _CMD_PLAY        = PREFIX + 'play'  ;
+const _CMD_PLAY        = PREFIX + 'p'  ;
 const _CMD_LYRICS      = PREFIX + 'lyrics';
 const _CMD_PAUSE       = PREFIX + 'stop';
 const _CMD_RESUME      = PREFIX + 'continue';
