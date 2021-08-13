@@ -38,11 +38,6 @@ necessary_dirs()
 
 
 
-const SETTINGS_FILE = 'config.json';
-
-let DISCORD_TOK = null;
-let WITAPIKEY_TOK = null; 
-
 function loadConfig() {
  
         DISCORD_TOK = process.env.DISCORD_TOK;
@@ -53,6 +48,7 @@ function loadConfig() {
 }
 loadConfig()
 
+client.login(DISCORD_TOK)
 
 client.on("warn", info => console.log(info));
 
@@ -478,4 +474,4 @@ const PLAY_CMDS = [_CMD_PLAY, _CMD_PAUSE, _CMD_RESUME,  _CMD_SKIP, _CMD_LYRICS, 
 
 
 //DONT DO ANYTHING WITH THIS TOKEN lol
-client.login(DISCORD_TOK)
+// client.login(DISCORD_TOK)
