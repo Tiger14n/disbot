@@ -9,8 +9,8 @@ const ytdl = require("ytdl-core");
 const yts = require( 'yt-search' );
 const { play } = require("../system/music.js");
 module.exports = {
-  name: "play",
-  description: "Play the song and feel the music",
+  name: "p",
+  description: "Play the song and",
   async execute(client, message, args) {
     let embed = new MessageEmbed()
 .setColor(COLOR);
