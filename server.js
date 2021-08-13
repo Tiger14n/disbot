@@ -44,17 +44,12 @@ let DISCORD_TOK = null;
 let WITAPIKEY_TOK = null; 
 
 function loadConfig() {
-    if (fs.existsSync(SETTINGS_FILE)) {
-        const CFG_DATA = JSON.parse( fs.readFileSync(SETTINGS_FILE, 'utf8') );
-        DISCORD_TOK = CFG_DATA.TOKEN;
-        WITAPIKEY_TOK = CFG_DATA.WITAPIKEY;
-
-    } else {
+ 
         DISCORD_TOK = process.env.DISCORD_TOK;
         WITAPIKEY_TOK = process.env.WITAPIKEY_TOK;
 
   console.log(DISCORD_TOK + WITAPIKEY_TOK);
-    }
+   
 }
 loadConfig()
 
