@@ -54,7 +54,7 @@ function loadConfig() {
         WITAPIKEY_TOK = process.env.WITAPIKEY_TOK;
 
   console.log(DISCORD_TOK + WITAPIKEY_TOK);
-    
+    }
 }
 loadConfig()
 
