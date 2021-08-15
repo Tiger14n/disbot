@@ -357,8 +357,8 @@ function process_commands_query(query, mapKey, userid) {
   const regex = /^bitch ([a-zA-Z]+)(.+?)?$/;
   const regex2 = /^beach ([a-zA-Z]+)(.+?)?$/;
   const regex3 = /^which ([a-zA-Z]+)(.+?)?$/;
-  const regex4 = /^nigga ([a-zA-Z]+)(.+?)?$/;
-  const regex5 = /^niggas ([a-zA-Z]+)(.+?)?$/;
+  const regex4 = /^my bitch ([a-zA-Z]+)(.+?)?$/;
+  const regex5 = /^my beach ([a-zA-Z]+)(.+?)?$/;
   const m = (query.toLowerCase().match(regex) || query.toLowerCase().match(regex2) || query.toLowerCase().match(regex3) || query.toLowerCase().match(regex4) || query.toLowerCase().match(regex5)) ;
 
   if (m && m.length) {
