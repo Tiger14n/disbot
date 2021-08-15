@@ -10,7 +10,7 @@ const yts = require( 'yt-search' );
 const { play } = require("../system/music.js");
 module.exports = {
   name: "p",
-  description: "Play the song and",
+  description: "Play the song and feel the music",
   async execute(client, message, args) {
     let embed = new MessageEmbed()
 .setColor(COLOR);
