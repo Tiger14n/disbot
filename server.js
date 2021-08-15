@@ -2,7 +2,7 @@ const discord = require("discord.js")
 const client = new discord.Client({ disableEveryone: true, disabledEvents: ["TYPING_START"] });
 const { readdirSync } = require("fs");
 const { join } = require("path");
-const {QUEUE_LIMIT, PREFIX } = require("./config.json")
+const {QUEUE_LIMIT, PREFIX } = require("./config.json");
 // const { WITAPIKEY } = require("./config.json");
 
 // const listen = require("./commands/speech.js")
