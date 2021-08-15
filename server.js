@@ -38,26 +38,13 @@ necessary_dirs()
 
 
 
-const SETTINGS_FILE = 'config.json';
 
-let DISCORD_TOK = null;
-let WITAPIKEY_TOK = null; 
+
 
 function loadConfig() {
-    if (fs.existsSync(SETTINGS_FILE)) {
-        const CFG_DATA = JSON.parse( fs.readFileSync(SETTINGS_FILE, 'utf8') );
-        DISCORD_TOK = CFG_DATA.TOKEN;
-        WITAPIKEY_TOK = CFG_DATA.WITAPIKEY;
-        console.log(CFG_DATA)
 
-    } else {
         DISCORD_TOK = process.env.DISCORD_TOK;
         WITAPIKEY_TOK = process.env.WITAPIKEY_TOK;
-
-    }
-    if (!DISCORD_TOK || !WITAPIKEY_TOK)
-        throw 'failed loading config #113 missing keys!'
-    
 }
 loadConfig()
 
