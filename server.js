@@ -2,7 +2,7 @@ const discord = require("discord.js")
 const client = new discord.Client({ disableEveryone: true, disabledEvents: ["TYPING_START"] });
 const { readdirSync } = require("fs");
 const { join } = require("path");
-const {QUEUE_LIMIT, PREFIX } = require("./config.json");
+const {QUEUE_LIMIT, PREFIX } = require("./config.json")
 // const { WITAPIKEY } = require("./config.json");
 
 // const listen = require("./commands/speech.js")
@@ -38,17 +38,29 @@ necessary_dirs()
 
 
 
+const SETTINGS_FILE = 'config.json';
+
+let DISCORD_TOK = null;
+let WITAPIKEY_TOK = null; 
+
 function loadConfig() {
- 
+    if (fs.existsSync(SETTINGS_FILE)) {
+        const CFG_DATA = JSON.parse( fs.readFileSync(SETTINGS_FILE, 'utf8') );
+        DISCORD_TOK = CFG_DATA.TOKEN;
+        WITAPIKEY_TOK = CFG_DATA.WITAPIKEY;
+        console.log(CFG_DATA)
+
+    } else {
         DISCORD_TOK = process.env.DISCORD_TOK;
         WITAPIKEY_TOK = process.env.WITAPIKEY_TOK;
 
-  console.log(DISCORD_TOK + WITAPIKEY_TOK);
-   
+    }
+    if (!DISCORD_TOK || !WITAPIKEY_TOK)
+        throw 'failed loading config #113 missing keys!'
+    
 }
 loadConfig()
 
-client.login(DISCORD_TOK)
 
 client.on("warn", info => console.log(info));
 
@@ -474,4 +486,4 @@ const PLAY_CMDS = [_CMD_PLAY, _CMD_PAUSE, _CMD_RESUME,  _CMD_SKIP, _CMD_LYRICS, 
 
 
 //DONT DO ANYTHING WITH THIS TOKEN lol
-// client.login(DISCORD_TOK)
+client.login(DISCORD_TOK)
