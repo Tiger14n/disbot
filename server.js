@@ -8,9 +8,12 @@ const {QUEUE_LIMIT, PREFIX } = require("./config.json")
 // const listen = require("./commands/speech.js")
 //CLIENT EVENTS
 client.on("ready", () => {
+    setInterval(function() {
+        console.log("im online");    
   console.log('Ready to play song | Bot created by CTK WARRIOR')
-  client.user.setActivity("!help | by Ko7o")
- 
+
+ client.user.setActivity("!help - Ko7o")
+ }, 60 * 10000); // 60 * 1000 milsec
 })
 
 ///////////////////////////////////
